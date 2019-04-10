@@ -1514,7 +1514,7 @@ money32 string_to_money(const char* string_to_monetise)
     number /= (currencyDesc->rate / 10.0);
     auto whole = static_cast<uint16_t>(number);
     auto fraction = static_cast<uint8_t>((number - whole) * 100);
-
+    //testing
     money32 result = MONEY(whole, fraction);
     // Check if MONEY resulted in overflow
     if ((whole > 0 && result < 0) || result / 10 < whole)
